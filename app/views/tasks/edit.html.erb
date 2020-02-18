@@ -1,0 +1,14 @@
+<h1>Edit Task</h1>
+
+<form action="/tasks/:id" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="title">title: </label>
+  <input type="text" name="title" id="title" value= "<%= @task.title %>" >
+
+  <label for="details">details: </label>
+  <input type="text" name="details" id="details" value="<%= @task.details %>" >
+
+  <input type="submit">
+</form>
+
+<%= link_to "Back to the list", index_path %>

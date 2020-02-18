@@ -1,0 +1,9 @@
+
+<h2>Tasks</h2>
+<ul>
+<% @tasks.each do |x| %>
+  <li><%= link_to x.title, show_path(x) %>
+    <input type="checkbox" name="check" unchecked>
+  </li>
+<% end %>
+</ul>
